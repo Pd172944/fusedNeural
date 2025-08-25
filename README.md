@@ -1,3 +1,5 @@
+[IN PROGRESS]
+
 A from scratch low-level neural network in C with a focus on performance optimization for resource constrained environments.
 
 Single layer with forward and backward passes
