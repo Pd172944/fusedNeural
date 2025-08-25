@@ -1,0 +1,33 @@
+---
+triple:          'x86_64-apple-darwin'
+binary-path:     neuralNet
+relocations:
+  - { offset: 0x26, size: 0x8, addend: 0x0, symName: _create_tensor, symObjAddr: 0x0, symBinAddr: 0x100001410, symSize: 0x110 }
+  - { offset: 0xCF, size: 0x8, addend: 0x0, symName: _create_tensor, symObjAddr: 0x0, symBinAddr: 0x100001410, symSize: 0x110 }
+  - { offset: 0x113, size: 0x8, addend: 0x0, symName: _getNumElements, symObjAddr: 0x110, symBinAddr: 0x100001520, symSize: 0x50 }
+  - { offset: 0x173, size: 0x8, addend: 0x0, symName: _freeTensor, symObjAddr: 0x160, symBinAddr: 0x100001570, symSize: 0x40 }
+  - { offset: 0x197, size: 0x8, addend: 0x0, symName: _printTensor, symObjAddr: 0x1A0, symBinAddr: 0x1000015B0, symSize: 0xF3 }
+  - { offset: 0x219, size: 0x8, addend: 0x0, symName: _matmul_naive, symObjAddr: 0x0, symBinAddr: 0x1000016B0, symSize: 0x240 }
+  - { offset: 0x23B, size: 0x8, addend: 0x0, symName: _matmul_naive, symObjAddr: 0x0, symBinAddr: 0x1000016B0, symSize: 0x240 }
+  - { offset: 0x2FD, size: 0x8, addend: 0x0, symName: _add, symObjAddr: 0x240, symBinAddr: 0x1000018F0, symSize: 0xD0 }
+  - { offset: 0x35D, size: 0x8, addend: 0x0, symName: _relu, symObjAddr: 0x310, symBinAddr: 0x1000019C0, symSize: 0x60 }
+  - { offset: 0x39D, size: 0x8, addend: 0x0, symName: _set_random_data, symObjAddr: 0x370, symBinAddr: 0x100001A20, symSize: 0x70 }
+  - { offset: 0x3DD, size: 0x8, addend: 0x0, symName: _transpose, symObjAddr: 0x3E0, symBinAddr: 0x100001A90, symSize: 0x15E }
+  - { offset: 0x512, size: 0x8, addend: 0x0, symName: _create_linear_layer, symObjAddr: 0x0, symBinAddr: 0x100001BF0, symSize: 0xC0 }
+  - { offset: 0x5DA, size: 0x8, addend: 0x0, symName: _create_linear_layer, symObjAddr: 0x0, symBinAddr: 0x100001BF0, symSize: 0xC0 }
+  - { offset: 0x63A, size: 0x8, addend: 0x0, symName: _free_linear_layer, symObjAddr: 0xC0, symBinAddr: 0x100001CB0, symSize: 0x40 }
+  - { offset: 0x65E, size: 0x8, addend: 0x0, symName: _linear_forward, symObjAddr: 0x100, symBinAddr: 0x100001CF0, symSize: 0xF0 }
+  - { offset: 0x6DA, size: 0x8, addend: 0x0, symName: _linear_fused_forward, symObjAddr: 0x1F0, symBinAddr: 0x100001DE0, symSize: 0x1D0 }
+  - { offset: 0x7AA, size: 0x8, addend: 0x0, symName: _linear_backward, symObjAddr: 0x3C0, symBinAddr: 0x100001FB0, symSize: 0x1EC }
+  - { offset: 0x8C0, size: 0x8, addend: 0x0, symName: _mse_loss, symObjAddr: 0x0, symBinAddr: 0x1000021A0, symSize: 0xE0 }
+  - { offset: 0x8DB, size: 0x8, addend: 0x0, symName: _mse_loss, symObjAddr: 0x0, symBinAddr: 0x1000021A0, symSize: 0xE0 }
+  - { offset: 0x957, size: 0x8, addend: 0x0, symName: _mse_loss_gradient, symObjAddr: 0xE0, symBinAddr: 0x100002280, symSize: 0xA0 }
+  - { offset: 0xA6B, size: 0x8, addend: 0x0, symName: _quantize_tensor, symObjAddr: 0x0, symBinAddr: 0x100002320, symSize: 0x240 }
+  - { offset: 0xB34, size: 0x8, addend: 0x0, symName: _quantize_tensor, symObjAddr: 0x0, symBinAddr: 0x100002320, symSize: 0x240 }
+  - { offset: 0xBBE, size: 0x8, addend: 0x0, symName: _free_quantized_tensor, symObjAddr: 0x240, symBinAddr: 0x100002560, symSize: 0x40 }
+  - { offset: 0xBE2, size: 0x8, addend: 0x0, symName: _matmul_quantized, symObjAddr: 0x280, symBinAddr: 0x1000025A0, symSize: 0x31E }
+  - { offset: 0xD80, size: 0x8, addend: 0x0, symName: _train, symObjAddr: 0x0, symBinAddr: 0x1000028C0, symSize: 0xE0 }
+  - { offset: 0xDBF, size: 0x8, addend: 0x0, symName: _train, symObjAddr: 0x0, symBinAddr: 0x1000028C0, symSize: 0xE0 }
+  - { offset: 0xE6F, size: 0x8, addend: 0x0, symName: _benchmark_forward_pass, symObjAddr: 0xE0, symBinAddr: 0x1000029A0, symSize: 0x160 }
+  - { offset: 0xF13, size: 0x8, addend: 0x0, symName: _main, symObjAddr: 0x240, symBinAddr: 0x100002B00, symSize: 0x15B }
+...
