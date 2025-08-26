@@ -11,7 +11,12 @@ Post Training quantization
 
 **How to Run**
 1. Clone the repository:
-- git clone repository url
-2. Compile the source files
-3. Run the program
+  git clone https://github.com/Pd172944/fusedNeural.git
+2. Set synthetic data params
+   in main.c, set input_data and target_data dimensions (lines 59 and 63)
+    
+3. Compile the source files
+   gcc -g tensor.c operations.c neuralNet.c loss.c quantized.c main.c -o neuralNet
+4. Run the program
+   ./neuralNet
   
