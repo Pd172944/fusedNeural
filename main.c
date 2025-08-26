@@ -56,15 +56,15 @@ int main() {
     srand(time(NULL));
 
 //synthetic data
-    int input_dims[2] = {1, 10};
+    int input_dims[2] = {256, 128};
     Tensor* input_data = create_tensor(input_dims, 2);
     set_random_data(input_data);
 
-    int target_dims[2] = {1, 5};
+    int target_dims[2] = {256, 512};
     Tensor* target_data = create_tensor(target_dims, 2);
     set_random_data(target_data);
 
-    LinearLayer* layer = create_linear_layer(10, 5);
+    LinearLayer* layer = create_linear_layer(input_data->shape.dims[1], target_data->shape.dims[1]);
 
     train(layer, input_data, target_data, 500, 0.01);
 

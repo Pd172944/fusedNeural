@@ -26,14 +26,23 @@ Tensor* matmul_naive(Tensor* a, Tensor* b) {
 }
     //add
     Tensor* add(Tensor* a, Tensor* b) {
-        assert(a->num_elements == b->num_elements);
 
-        Tensor* result = create_tensor(a->shape.dims, a->shape.num_dims);
-        for (int i = 0; i < a->num_elements; i++) {
-            result->data[i] = a->data[i]+b->data[i];
+
+    // assume 'a' is the larger tensor (the matmul result) and 'b' is the smaller bias tensor
+    //code only handles a specific case: a 2D tensor + a 1-row tensor
+    assert(a->shape.num_dims == 2 && b->shape.num_dims == 2);
+    assert(b->shape.dims[0] == 1); // check that the bias is a single row
+    assert(a->shape.dims[1] == b->shape.dims[1]); // check that the column count matches
+
+    Tensor* result = create_tensor(a->shape.dims, a->shape.num_dims);
+    for (int i = 0; i < a->shape.dims[0]; i++) { // loop over the rows of the larger tensor
+        for (int j = 0; j < a->shape.dims[1]; j++) { // loop over the columns
+            // add the corresponding bias element to each row
+            result->data[i * a->shape.dims[1] + j] = a->data[i * a->shape.dims[1] + j] + b->data[j];
         }
-        return result;
     }
+    return result;
+}
 
     //ReLu activation this is zero out negative
     void relu(Tensor* t) {
